@@ -20,7 +20,20 @@ Sample Code for Leetcode 131 (Partitioning Panlindrome) (Where the single-iterat
 
 <img src='https://user-images.githubusercontent.com/74223059/206667833-903f54e3-16c5-4215-ac6a-436c30e62f5f.png' width="400" height='300'/> <img src='https://user-images.githubusercontent.com/74223059/206667782-f95d4a97-27e9-4cc9-ab20-bb155bfdd1ed.png' width="400" height='300'/> 
 
+## 1.2 Dynamic Programming 
+### Steps: <br />
+1. Define dp table meaning. 
+2. Find the transfer function.(How dp table is updated from t to t+1)
+3. Think through the traversing and updating process.
 
+Note 1 : Care Initializaton and Boundary (list index out of range) .
+Note 2 : For some problems (searching matrix), Dynamic Programming is an optimized Algorithm for DFS with memorization. Using DFS may cause time limt to exceed.
+
+Classic dynamic programming problem:
+1) Least Cost Route/Arrangement.(DFS may be applicable in some cases).eg. Fibonacci numbers (509), Climbing stairs (70,746), Unique Paths (62,63)  
+2) best time to sell stocks (121,122,123,188,309,714)/ largest temperature difference.
+4) Subset Problem (674，516)
+3) Packaging problems.
 
 
 
