@@ -7,10 +7,14 @@
 # Create a docker container from docker image.
 
 ```
-docker run -dit -v /home/xyq1896/workplace/:/workplace/ --name my_dock  pytorch/pytorch
+docker run -it --gpus=all --name container -v <host_dir>:<docker_dir> image:latest /bin/bash
 ```
 
-- pytorch/pytorch is the name of docker image
+```
+docker run -dit  --gpus=all -v /home/xyq1896/workplace/:/workplace/ --name my_dock  pytorch/pytorch
+```
+
+- image:latest, the name of docker image
 - <host_dir>:<docker_dir> Use absolute path
 
 # Enter Docker
