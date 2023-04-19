@@ -28,7 +28,7 @@ Hence, It is promising to keep this Focus-and-Detect scheme.
 Multiple papers have investigated the benefit of image tiling in small object detection, in other words, zoom in to image patches and detect. Here is an example.
 [The Power of Tiling for Small Object Detection](https://openaccess.thecvf.com/content_CVPRW_2019/papers/UAVision/Unel_The_Power_of_Tiling_for_Small_Object_Detection_CVPRW_2019_paper.pdf)
 
-[Image-tiling](images/image tiling .png)
+![Image-tiling](images/image tiling .png)
 
 Moreover, the content of our image is carefully chosen each time we place the camera, in which the ball trajectory will be centralized. 
 Based on this, it is possible to customize and pre-define some region of intrests for image tiling.
