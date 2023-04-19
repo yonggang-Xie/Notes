@@ -38,12 +38,11 @@ Based on this, it is possible to customize and pre-define some region of intrest
 In Yolov4 decoder head, feature maps were divided to 3 scales to deal with large, mid and small objects. The connection is limited to one-direction information flow, top-to-bottom.
 As mentioned, our experiment also indicated its limitation. 
 
-There is a room to improve the Feature Pyramid Network by making bi-directional connection across multi-scale features. 
+There is a room to improve the Feature Pyramid Network by making bi-directional connection across multi-scale features. Besides, the authors of EfficientDet pointed out that features of different scales contribute to prediction uneually, which means there is a need to learn the weights.
 
-![alt text](images/Bi-FPN.png)
+![Bi-FPN](images/Bi-FPN.png)
 
-Besides, the authors of EfficientDet pointed out that features of different scales contribute to prediction uneually, which means there is a need to learn the weights.
 The [EffcientDet](https://arxiv.org/pdf/1911.09070.pdf) have provided a good implementation of bi-directional FPN with learnable weights on feature maps in different scales. 
-It is reasonable to deduce that having sub-global region information might help to locate the baseball and the multi-scale feature is highly likely beneficial to small object detecion.
+It is reasonable to deduce that having sub-global region information might help to locate the baseball and the multi-scale feature fusion is highly likely beneficial to small object detecion.
 
 As further discussion, we could even add handcrafted weights to force the model to small-scale feature maps.(Just Intuition) 
