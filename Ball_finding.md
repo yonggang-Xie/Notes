@@ -21,6 +21,11 @@ $$\mathrm{DIoU}(B_{\mathrm{gt}}, B_{\mathrm{pred}}) = 1 - IoU + \frac{\rho^2(B_{
 where gt denotes ground_truth here.b and $b_{gt}$ denote the central points of B and $B_{gt}$, 
 $\rho(·)$ is the Euclidean distance, and c is the diagonal length of the smallest enclosing box covering the two boxes.
 
+## Extension on DIoU:
+CIOU loss and the EIOU loss sometimes fail to converge in bounding box regression because the Euclidean distance term used by them converges slowly and even causes gradient explosion due to the large gradient in the early stage of training. At the same time, the normalized denominator of Euclidean distance term also plays an antagonistic role to the convergence of loss in the whole training stage.
+[Manhattan-distance IOU loss for fast and accurate bounding box regression and object detection](https://www.sciencedirect.com/science/article/abs/pii/S0925231222006191)
+
+
 ## Image tiling/focusing
 The difficulty of baseball finding falls in the small object detection.
 Our experiment of the feature pyramid segmentation, which improved the center regression revealed that the feature fusion network in YOLOv4 decoder head is not what we expected for small object detection.
