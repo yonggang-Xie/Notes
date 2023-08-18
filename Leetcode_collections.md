@@ -11,7 +11,7 @@ snake and ladders
 
 ### BFS in graph
 - 01 Matrix (542)
-- * snakes and ladders *
+- snakes and ladders (Non-linear not solvable by DP)
 
 
 ## DFS
