@@ -9,6 +9,7 @@ Word Search ?
 
 ### BFS in graph
 - 01 Matrix (542)
+- * snakes and ladders *
 
 
 ## DFS
@@ -16,7 +17,7 @@ Word Search ?
 - Number of Islands (200)
 - Surrounded Regions (130)
 
-To do 
+* To do *
 - course schedule I and II (207 210)
 -  Max Area of Island (695)
 -  Generate Parentheses (22)
@@ -39,7 +40,7 @@ To do
 
 ## subset
 - Palindromic Substrings(647)
-- Longest Palindromic Subsequence (516)
+* - Longest Palindromic Subsequence (516) *
 
 # Backtrack
 
