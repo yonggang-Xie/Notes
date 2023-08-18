@@ -1,4 +1,6 @@
 Word Search ?
+Rainwater 
+snake and ladders
 # BFS and DFS
 ## BFS
 ### BFS in tree
