@@ -59,12 +59,15 @@ snake and ladders
 
 # linked list
 
+
+
 # Tiktok
 ## unsolved  
 - Kth Largest Element in an Array (215)
 - Binary Tree Maximum Path Sum (124)
 - Spiral Matrix
 - Search a 2D Matrix I and II
+- gas station
 
 
 ## half
