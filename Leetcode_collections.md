@@ -1,4 +1,4 @@
-Word Search ?
+
 Rainwater 
 snake and ladders
 # BFS and DFS
@@ -26,7 +26,7 @@ snake and ladders
 -  Clone Graph  (133)
 
 # Dynamic Programming
-- Fibonacci numbers (509)
+- Fibonacci numbers (509) dp better than recursion. recursion abundant computing O(2^n)
 - Packaging problems (1049)
 - Climbing stairs (70,746)
 - Jump Games (45, 55)
@@ -58,5 +58,27 @@ snake and ladders
 
 
 # linked list
-# 
+
+# Tiktok
+## unsolved  
+- Kth Largest Element in an Array (215)
+- Binary Tree Maximum Path Sum (124)
+- Spiral Matrix
+- Search a 2D Matrix I and II
+- Minimum Path Sum (64)
+
+## half
+- Median of Two Sorted Arrays (4)
+- K-th Smallest in Lexicographical Order 10-ary tree
+- Nth digit () 
+- Course Schedule () dfs detect cycle topological sorting
+
+
+## Solved 
+- Word Search () dp
+- 01 Matrix () dp
+- Unique Path I and II () dp
+- Number of Island () dfs 
+- Max area of island () dfs 
+- linked list cycle I and II (141 and 142)
 
