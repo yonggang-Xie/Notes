@@ -65,7 +65,7 @@ snake and ladders
 - Binary Tree Maximum Path Sum (124)
 - Spiral Matrix
 - Search a 2D Matrix I and II
-- Minimum Path Sum (64)
+
 
 ## half
 - Median of Two Sorted Arrays (4)
@@ -78,6 +78,8 @@ snake and ladders
 - Word Search () dp
 - 01 Matrix () dp
 - Unique Path I and II () dp
+- Minimum Path Sum (64) Simple dp , use grid iteself as dp.
+
 - Number of Island () dfs 
 - Max area of island () dfs 
 - linked list cycle I and II (141 and 142)
