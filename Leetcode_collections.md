@@ -78,8 +78,8 @@ snake and ladders
 
 
 ## Solved 
-- Word Search () dp
-- 01 Matrix () dp
+- Word Search () dfs
+- 01 Matrix () dfs
 - Unique Path I and II () dp
 - Minimum Path Sum (64) Simple dp , use grid iteself as dp.
 
