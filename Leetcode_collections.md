@@ -62,12 +62,25 @@ snake and ladders
 
 
 # Tiktok
-## unsolved  
-- Kth Largest Element in an Array (215)
+
+
+## unsolved 
+### from zhihu https://zhuanlan.zhihu.com/p/392284340
+-  Search in Rotated Sorted Array (33)
+-  Permutation Sequence (60)
+-  动物园有猴山，每天需要给猴子们发香蕉,猴子会排队依次取食。 猴子们铺张浪费,会多拿食物,但最多不会拿超过自身食量的二倍且不会超过当前还存在的香蕉的一半,最后—个猴子除外(即最后—个猴子可以拿完剩余的所有香蕉)。 最少需要准备多少香蕉,能保证所有猴子都能吃饱? 输入每个猴子的食量，输出最少的香蕉个数
+-  逆向思维，从最后一个猴子开始，排序猴子的食量从大到小，贪心算法推到最第一个。
+
+- 二叉树子路径和为k的路径个数
+- 求和为k的子数组个数
+- 判断是否存在个数超过数组长度一半的数
+
+
+
+### from interview experiences
 - Binary Tree Maximum Path Sum (124)
 - Spiral Matrix
 - Search a 2D Matrix I and II
-- gas station
 
 
 ## half
@@ -77,7 +90,12 @@ snake and ladders
 - Course Schedule () dfs detect cycle topological sorting
 
 
+
 ## Solved 
+
+-  Kth Largest Element in an Array (215)
+- gas station () sliding window
+- 
 - Word Search () dfs
 - 01 Matrix () dfs
 - Unique Path I and II () dp
@@ -87,3 +105,6 @@ snake and ladders
 - Max area of island () dfs 
 - linked list cycle I and II (141 and 142)
 
+## First Round
+- course schedule
+- rotate image
