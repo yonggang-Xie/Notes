@@ -74,6 +74,7 @@ snake and ladders
 - 二叉树子路径和为k的路径个数
 - 求和为k的子数组个数
 - 判断是否存在个数超过数组长度一半的数
+- longest-increasing-path-in-a-matrix
 
 
 
