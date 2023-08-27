@@ -75,7 +75,7 @@
 ## unsolved 
 ### from zhihu https://zhuanlan.zhihu.com/p/392284340
 -  Search in Rotated Sorted Array (33)
--  longest-increasing-path-in-a-matrix
+-  Nth digit () 
 
 -  Permutation Sequence (60)
 - 求和为k的子数组个数
@@ -90,17 +90,17 @@
 - Spiral Matrix
 
 
-
-
-## half
+## NOT fimiliar
+- longest-increasing-path-in-a-matrix (329) dfs + dp save the visited cell
+- linked list cycle I and II (141 and 142) slow fast pointer
 - Median of Two Sorted Arrays (4)
-- Kth Largest Element in an Array (215) quick select.
 - K-th Smallest in Lexicographical Order 10-ary tree
-- Nth digit () 
 
+
+- Kth Largest Element in an Array (215) quick select.
 - Course Schedule () dfs detect cycle topological sorting
 - Edit Distance dp transition from (delete, insert and replace)
-- linked list cycle I and II (141 and 142) slow fast pointer
+
 
 
 ## Solved 
