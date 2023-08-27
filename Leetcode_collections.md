@@ -132,4 +132,28 @@
 - course schedule
 - rotate image
 
+
+
+
+Slow fast pointer theory 
+
+Definitions:
+
+Let's assume the distance from the head of the linked list to the start of the cycle is a.
+The distance from the start of the cycle to the point where the slow and fast pointers first meet is b.
+The remaining distance of the cycle (from the meeting point back to the start of the cycle) is c.
+Distances Covered:
+
+When the slow pointer and fast pointer meet, the slow pointer has traveled a distance of a + b.
+The fast pointer has traveled a distance of a + b + c + b (it has covered the cycle more than once).
+Since the fast pointer travels at twice the speed of the slow pointer, its distance is also twice that of the slow pointer: 2(a + b).
+Equating the Distances:
+
+From the above, we can write the equation: 2(a + b) = a + b + c + b.
+Simplifying, we get: a = c.
+Interpretation:
+
+The distance a (from the head to the start of the cycle) is the same as the distance c (from the meeting point of the pointers back to the start of the cycle).
+This means that if we reset the slow pointer to the head and move both pointers one step at a time, they will meet at the start of the cycle. This is because the slow pointer will cover a distance of a to reach the start of the cycle, and the fast pointer (starting from the meeting point) will also cover a distance of a (which is equivalent to c) to reach the start of the cycle.
+This mathematical insight is the reason why resetting the slow pointer to the head and then moving both pointers one step at a time until they meet again gives the start of the cycle.
   
