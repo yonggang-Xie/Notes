@@ -1,6 +1,3 @@
-
-Rainwater 
-snake and ladders
 # BFS and DFS
 ## BFS
 ### BFS in tree
@@ -30,7 +27,9 @@ snake and ladders
 - Packaging problems (1049)
 - Climbing stairs (70,746)
 - Jump Games (45, 55)
-
+- Frog Jump (403)
+- Edit Distance ()
+  
 ## graph
 
 - Unique Paths I and II (62,63)
@@ -54,10 +53,19 @@ snake and ladders
 - Leetcode 332 (Reconstruct Itinerary)
 
 # Two Pointers
+- two sum , three sum
+- contain most water
+- trapping rain water (can also use dp)
+
 # Sliding Window
+- gas station
 
 
 # linked list
+- reverse linked list
+- Reverse Linked List II (92)
+- reverse group list
+
 
 
 
@@ -67,43 +75,56 @@ snake and ladders
 ## unsolved 
 ### from zhihu https://zhuanlan.zhihu.com/p/392284340
 -  Search in Rotated Sorted Array (33)
--  Permutation Sequence (60)
+-  longest-increasing-path-in-a-matrix
 
-- 二叉树子路径和为k的路径个数
+-  Permutation Sequence (60)
 - 求和为k的子数组个数
 - 判断是否存在个数超过数组长度一半的数
-- longest-increasing-path-in-a-matrix
+
 - 翻转带环的链表
 
 
 
 ### from interview experiences
-- Binary Tree Maximum Path Sum (124)
+
 - Spiral Matrix
-- Search a 2D Matrix I and II
+
+
 
 
 ## half
 - Median of Two Sorted Arrays (4)
+- Kth Largest Element in an Array (215) quick select.
 - K-th Smallest in Lexicographical Order 10-ary tree
 - Nth digit () 
-- Course Schedule () dfs detect cycle topological sorting
 
+- Course Schedule () dfs detect cycle topological sorting
+- Edit Distance dp transition from (delete, insert and replace)
+- linked list cycle I and II (141 and 142) slow fast pointer
 
 
 ## Solved 
+### binary tree 
+- Binary Tree Maximum Path Sum (124) recursion
+- Path Sum I and II recursion/dfs
 
--  Kth Largest Element in an Array (215)
-- gas station () sliding window
-- 
+### dfs
 - Word Search () dfs
 - 01 Matrix () dfs
+- Number of Island () dfs 
+- Max area of island () dfs
+
+- Search a 2D Matrix I -- flatten as 1D.
+- Search a 2D Matrix II  -- start from top-right corner, < move down, > move left.
+
+
+- gas station () sliding window
+
+### dp
 - Unique Path I and II () dp
 - Minimum Path Sum (64) Simple dp , use grid iteself as dp.
+ 
 
-- Number of Island () dfs 
-- Max area of island () dfs 
-- linked list cycle I and II (141 and 142)
 
 -  动物园有猴山，每天需要给猴子们发香蕉,猴子会排队依次取食。 猴子们铺张浪费,会多拿食物,但最多不会拿超过自身食量的二倍且不会超过当前还存在的香蕉的一半,最后—个猴子除外(即最后—个猴子可以拿完剩余的所有香蕉)。 最少需要准备多少香蕉,能保证所有猴子都能吃饱? 输入每个猴子的食量，输出最少的香蕉个数 —————— 逆向思维，从最后一个猴子开始，排序猴子的食量从大到小，贪心算法推到最第一个。
 
