@@ -179,4 +179,38 @@ Interpretation:
 The distance a (from the head to the start of the cycle) is the same as the distance c (from the meeting point of the pointers back to the start of the cycle).
 This means that if we reset the slow pointer to the head and move both pointers one step at a time, they will meet at the start of the cycle. This is because the slow pointer will cover a distance of a to reach the start of the cycle, and the fast pointer (starting from the meeting point) will also cover a distance of a (which is equivalent to c) to reach the start of the cycle.
 This mathematical insight is the reason why resetting the slow pointer to the head and then moving both pointers one step at a time until they meet again gives the start of the cycle.
-  
+
+
+
+
+
+
+
+
+1049. Last Stone Weight II:
+
+Problem: You are given an array of integers stones where stones[i] is the weight of the i-th stone. We are to choose the largest two stones and smash them together. If the stones have the same weight, both stones are destroyed; if not, the stone with the smaller weight is destroyed, and the other stone's weight is reduced by the smaller stone's weight. The problem is to find the smallest possible weight of the last stone remaining.
+Approach: This problem can be reduced to a subset sum problem and can be solved using dynamic programming.
+743. Network Delay Time:
+
+Problem: There are N network nodes, labeled from 1 to N. Given times, a list of travel times as directed edges times[i] = (u, v, w), where u is the source node, v is the target node, and w is the time it takes for a signal to travel from source to target. We send a signal from a given node K. Return the time it takes for all nodes to receive the signal. If not all nodes receive the signal, return -1.
+Approach: This is a shortest path problem that can be solved using Dijkstra's algorithm or BFS.
+787. Cheapest Flights Within K Stops:
+
+Problem: Given the flight itinerary consisting of starting city A, destination city B, and the cost of the ticket, along with a maximum number of stops K, find the cheapest price from A to B with at most K stops. If there is no such route, output -1.
+Approach: This problem can be approached using BFS or dynamic programming.
+332. Reconstruct Itinerary:
+
+Problem: Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.
+Approach: This problem can be solved using DFS.
+1202. Smallest String With Swaps:
+
+Problem: You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string. You can swap the characters at any pair of indices in the given pairs any number of times. Return the lexicographically smallest string that s can be changed to after using the swaps.
+Approach: This problem can be approached using union-find or DFS.
+These problems involve undirected or directed graphs with some cost or weight and can be tackled using graph traversal techniques like DFS, BFS, or optimization techniques like dynamic programming.
+
+
+
+
+
+
