@@ -75,7 +75,7 @@
 ## unsolved 
 ### from zhihu https://zhuanlan.zhihu.com/p/392284340
 -  Search in Rotated Sorted Array (33)
--  Nth digit () 
+
 
 -  Permutation Sequence (60)
 - 求和为k的子数组个数
@@ -87,23 +87,29 @@
 
 ### from interview experiences
 
-- Spiral Matrix
+
 
 
 ## NOT fimiliar
+- Nth digit (400) 1. find digit_len, 2. find num by (//) 3. find digit by (%).
+- K-th Smallest in Lexicographical Order () 10-ary tree
+- Kth Largest Element in an Array (215) quick select.
+
 - longest-increasing-path-in-a-matrix (329) dfs + dp save the visited cell
 - linked list cycle I and II (141 and 142) slow fast pointer
 - Median of Two Sorted Arrays (4)
-- K-th Smallest in Lexicographical Order 10-ary tree
+  
 
 
-- Kth Largest Element in an Array (215) quick select.
 - Course Schedule () dfs detect cycle topological sorting
 - Edit Distance dp transition from (delete, insert and replace)
 
 
 
 ## Solved 
+## graph traverse
+- Spiral Matrix () traverse ,if outside of visited , undo and change direction.
+
 ### binary tree 
 - Binary Tree Maximum Path Sum (124) recursion
 - Path Sum I and II recursion/dfs
@@ -125,8 +131,20 @@
 - Minimum Path Sum (64) Simple dp , use grid iteself as dp.
  
 
-
+## tricky
 -  动物园有猴山，每天需要给猴子们发香蕉,猴子会排队依次取食。 猴子们铺张浪费,会多拿食物,但最多不会拿超过自身食量的二倍且不会超过当前还存在的香蕉的一半,最后—个猴子除外(即最后—个猴子可以拿完剩余的所有香蕉)。 最少需要准备多少香蕉,能保证所有猴子都能吃饱? 输入每个猴子的食量，输出最少的香蕉个数 —————— 逆向思维，从最后一个猴子开始，排序猴子的食量从大到小，贪心算法推到最第一个。
+
+```
+  def min_bananas(monkeys):
+      monkeys.sort(reverse=True)
+      bananas = monkeys[0]
+      for i in range(1, len(monkeys)):
+          bananas = max(2 * monkeys[i], bananas + bananas // 2)
+      return bananas
+```
+
+
+- Koko Eating Bananas (875) binary search , ceil()
 
 ## First Round
 - course schedule
