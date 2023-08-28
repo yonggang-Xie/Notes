@@ -86,6 +86,10 @@
 
 
 ### from interview experiences
+### from leetcode Tiktok collections
+- Longest Substring with At Least K Repeating Characters
+- Merge Intervals
+- Two City Scheduling
 
 
 
