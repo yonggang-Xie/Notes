@@ -78,7 +78,7 @@
 
 
 -  Permutation Sequence (60)
-- 求和为k的子数组个数
+
 - 判断是否存在个数超过数组长度一半的数
 
 - 翻转带环的链表
@@ -91,6 +91,7 @@
 
 
 ## NOT fimiliar
+- subarray sum equals to k (560) store every sum in hashmap, if sum - k seen , from there to here is a solution.  
 - Nth digit (400) 1. find digit_len, 2. find num by (//) 3. find digit by (%).
 - K-th Smallest in Lexicographical Order () 10-ary tree
 - Kth Largest Element in an Array (215) quick select.
