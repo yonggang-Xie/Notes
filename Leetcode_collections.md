@@ -74,18 +74,24 @@
 
 ## unsolved 
 ### from zhihu https://zhuanlan.zhihu.com/p/392284340
+
+
 -  Search in Rotated Sorted Array (33)
 
 
 -  Permutation Sequence (60)
-
 - 判断是否存在个数超过数组长度一半的数
 
 - 翻转带环的链表
 
 
 
-### from interview experiences
+### from interview experiences(Niu ke) AI-lab
+-  Wildcard Matching (44)
+-  Lowest Common Ancestor of a Binary Tree
+
+- intersection-of-two-linked-lists (160) hashmap
+
 ### from leetcode Tiktok collections
 - Longest Substring with At Least K Repeating Characters
 - Merge Intervals
@@ -136,7 +142,7 @@
 - Minimum Path Sum (64) Simple dp , use grid iteself as dp.
  
 
-## tricky
+## tricky (math)
 -  动物园有猴山，每天需要给猴子们发香蕉,猴子会排队依次取食。 猴子们铺张浪费,会多拿食物,但最多不会拿超过自身食量的二倍且不会超过当前还存在的香蕉的一半,最后—个猴子除外(即最后—个猴子可以拿完剩余的所有香蕉)。 最少需要准备多少香蕉,能保证所有猴子都能吃饱? 输入每个猴子的食量，输出最少的香蕉个数 —————— 逆向思维，从最后一个猴子开始，排序猴子的食量从大到小，贪心算法推到最第一个。
 
 ```
@@ -150,6 +156,18 @@
 
 
 - Koko Eating Bananas (875) binary search , ceil()
+
+- 现在有一堆点，求一个点到每个点的距离之和最小，证明这个点是质心。
+- 甲扔n次骰子，取其中最大的点数作为它的最终点数，乙扔一次骰子得到点数，求乙的点数大于甲的概率。
+- 某种病的发病率为1/100，某种检测该病的技术检测正确率为99/100，现有一人被检测到生病的概率为p，求他真实生病的概率是多少？
+- 在上一问的基础上，现在连续两次检测为有病才会停止检测，求检测次数的期望值。
+- 概率题， 10个人里每个人在10分钟内的任何一个分钟到达的概率是均匀分布的，问所有人都到达的时刻在几分钟时概率最大。
+
+### deep learning questions
+- 怎么解决梯度消失问题？
+- 批量归一化的思想，还了解其他归一化吗？
+- 说下平时用到的深度学习的trick
+- 说下adam的思想
 
 ## First Round
 - course schedule
