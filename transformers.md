@@ -5,6 +5,7 @@
    - [Positional Embeddings](#positional-embeddings)
    - [Activation Functions: GeLu vs ReLu](#activation-functions-gelu-vs-relu)
    - [Layer Normalization vs Batch Normalization](#layer-normalization-vs-batch-normalization)
+   - [pre-layer and post-layer normalization](#pre-layer-and-post-layer-normalization)
 2. [Transformer Variants](#transformer-variants)
    - [Vision Transformers](#vision-transformers)
      - [How Does It Work](#how-does-it-work)
@@ -122,6 +123,66 @@ Where:
 4. **Autoregressive Decoding**: In autoregressive decoding scenarios, like in language modeling, there's no "batch" during decoding, making BatchNorm unsuitable. LayerNorm doesn't have this limitation.
 
 In summary, while both LayerNorm and BatchNorm are powerful normalization techniques, the specific characteristics and requirements of transformers make LayerNorm a more suitable choice.
+
+## pre-layer and post-layer normalization<a name="pre-layer-and-post-layer-normalization"></a>
+Layer normalization (LayerNorm) is a technique used to stabilize the activations of neural networks, and it's especially popular in transformer architectures. The placement of LayerNorm in relation to other components of the network, such as the feed-forward and attention mechanisms, leads to the terms "pre-layer normalization" and "post-layer normalization." Let's delve into these concepts in detail:
+
+### 1. Post-Layer Normalization:
+
+This is the original design introduced in the "Attention Is All You Need" paper by Vaswani et al.
+
+**Structure**:
+- First, the input goes through the sub-layer (e.g., multi-head attention or feed-forward neural network).
+- Then, the output of the sub-layer is added to the original input (residual connection).
+- Finally, LayerNorm is applied to the result.
+
+**Mathematically**:
+Given an input \( x \) and a sub-layer \( F \):
+\[ \text{Output} = \text{LayerNorm}(x + F(x)) \]
+
+**Advantages**:
+- It's the original design and has been widely tested in various applications, showing good performance.
+- The normalization after the sub-layer can help stabilize the activations before they are passed to the next layer.
+
+### 2. Pre-Layer Normalization:
+
+This is a variant where LayerNorm is applied before the sub-layer.
+
+**Structure**:
+- First, LayerNorm is applied to the input.
+- The normalized input is then passed through the sub-layer.
+- Finally, the output of the sub-layer is added to the original input (residual connection).
+
+**Mathematically**:
+Given an input \( x \) and a sub-layer \( F \):
+\[ \text{Output} = x + F(\text{LayerNorm}(x)) \]
+
+**Advantages**:
+- Pre-LayerNorm can lead to faster convergence during training. Some empirical studies have shown that models with pre-layer normalization can reach similar performance levels as post-layer normalization but in fewer training steps.
+- It can be more robust to different learning rates or initialization strategies.
+- Pre-LayerNorm can be more interpretable. Since normalization is applied before the sub-layer, the sub-layer operates on activations with a consistent scale and mean. This can make it easier to understand the behavior of individual sub-layers.
+
+### Comparison and Insights:
+
+1. **Training Dynamics**: Pre-layer normalization can change the training dynamics, potentially leading to faster convergence or better generalization in some cases. However, the exact benefits can be task-dependent.
+
+2. **Residual Connections**: Both pre-layer and post-layer normalization make use of residual connections. These connections help in gradient flow during backpropagation and allow deeper transformer models to be trained more easily.
+
+3. **Empirical Differences**: In practice, the choice between pre-layer and post-layer normalization might come down to empirical results. For some tasks or datasets, one might outperform the other. It's often beneficial to experiment with both to determine which is more suitable for a specific application.
+
+4. **Variants and Hybrids**: There are also hybrid approaches that use both pre-layer and post-layer normalization in different parts of the model or combine them in more intricate ways.
+
+In summary, both pre-layer and post-layer normalization aim to stabilize the activations in transformer models, making them easier to train and potentially improving their performance. The choice between them often depends on the specific application, empirical results, and the researcher's preference.
+
+
+
+
+
+
+
+
+
+
 
 
 ## Transformer Variants <a name="transformer-variants"></a>
