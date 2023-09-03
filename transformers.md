@@ -97,13 +97,14 @@ $$
 \sigma_j^2 = \frac{1}{N} \sum_{i=1}^{N} (x_{ij} - \mu_j)^2
 $$
 
-$$
+\[
 \text{Norm}_{x_{ij}} = \frac{x_{ij} - \mu_j}{\sqrt{\sigma_j^2 + \epsilon}}
-$$
+\]
 
-$$
+\[
 \text{Output}_{ij} = \gamma_j \times \text{Norm}_{x_{ij}} + \beta_j
-$$
+\]
+
 
 Where:
 - $N$ is the batch size.
