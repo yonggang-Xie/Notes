@@ -87,29 +87,28 @@ Where:
 **Definition**: Batch normalization normalizes the activations across the batch dimension. It computes the mean and variance for each feature based on the batch of data.
 
 **Formula**:
-Given an input $x$ (a matrix where each row is a data point and each column is a feature), BatchNorm computes:
+Given an input matrix `X` where each row is a data point and each column is a feature:
 
-$$
-\mu_j = \frac{1}{N} \sum_{i=1}^{N} x_{ij}
-$$
+1. Compute the mean for each feature:
 
-$$
-\sigma_j^2 = \frac{1}{N} \sum_{i=1}^{N} (x_{ij} - \mu_j)^2
-$$
+\[ \mu_j = \frac{1}{N} \sum_{i=1}^{N} x_{ij} \]
 
-\[
-\text{Norm}_{x_{ij}} = \frac{x_{ij} - \mu_j}{\sqrt{\sigma_j^2 + \epsilon}}
-\]
+2. Compute the variance for each feature:
 
-\[
-\text{Output}_{ij} = \gamma_j \times \text{Norm}_{x_{ij}} + \beta_j
-\]
+\[ \sigma_j^2 = \frac{1}{N} \sum_{i=1}^{N} (x_{ij} - \mu_j)^2 \]
 
+3. Normalize the input:
+\[ \text{Norm}_{x_{ij}} = \frac{x_{ij} - \mu_j}{\sqrt{\sigma_j^2 + \epsilon}} \]
+
+4. Scale and shift the normalized input:
+\[ \text{Output}_{ij} = \gamma_j \times \text{Norm}_{x_{ij}} + \beta_j \]
 
 Where:
-- $N$ is the batch size.
-- $\mu_j$ and $\sigma_j^2$ are the mean and variance computed for feature $j$ across the batch.
-- $\gamma_j$ and $\beta_j$ are learnable scale and shift parameters for feature $j$.
+- `N` is the batch size.
+- `\mu_j` and `\sigma_j^2` are the mean and variance computed for feature `j` across the batch.
+- `\gamma_j` and `\beta_j` are learnable scale and shift parameters for feature `j`.
+- `\epsilon` is a small constant added for numerical stability.
+
 
 **Advantages**:
 - **Regularization Effect**: BatchNorm introduces some noise during training due to its batch-wise statistics, providing a slight regularization effect.
@@ -131,7 +130,52 @@ In summary, while both LayerNorm and BatchNorm are powerful normalization techni
 ... content ...
 
 #### Dealing with Larger Resolution Images at Inference Time <a name="dealing-with-larger-resolution-images-at-inference-time"></a>
-... content ...
+When using Vision Transformers (ViTs) for image classification, the model is trained on fixed-sized patches derived from the input image. If you've trained a ViT on 224x224 images with a patch size of 16x16, you'll indeed have 196 patches (since \( \frac{224}{16} \times \frac{224}{16} = 14 \times 14 = 196 \)).
+
+For inference on a 1024x1024 image, you have a few options:
+
+1. **Resize the Image**: The simplest approach is to resize the 1024x1024 image to 224x224 and then feed it to the trained ViT model. This approach is straightforward but may lose some fine-grained details present in the larger image.
+
+2. **Overlapping Patches**: Instead of resizing the image, you can extract 224x224 patches from the 1024x1024 image, possibly with overlap. You can then feed each patch to the ViT model and aggregate the predictions. This approach can be computationally expensive but may retain more details from the original image.
+
+3. **Train a New Model**: If computational resources allow, you can train a new ViT model specifically for 1024x1024 images. This would involve adjusting the architecture to handle the increased number of patches (i.e., \( \frac{1024}{16} \times \frac{1024}{16} = 64 \times 64 = 4096 \) patches). This approach would be the most accurate but also the most resource-intensive.
+
+4. **Adaptive Computation**: Some recent methods adaptively select patches from the image based on their importance. This way, you can select a fixed number of patches (e.g., 196) from the 1024x1024 image, even though there are many more potential patches. This approach requires more sophisticated techniques and may not be as straightforward as the other options.
+
+5. **Hybrid Models**: Another approach is to use a combination of convolutional layers and transformers. The convolutional layers can process the 1024x1024 image and reduce its spatial dimensions, and the resulting feature maps can be fed into the transformer. This way, you can handle larger images without drastically increasing the number of patches.
+
+Which approach you choose depends on your specific requirements, computational resources, and the importance of retaining details from the 1024x1024 images. If you have a specific paper or resource in mind that discusses handling different image sizes with ViTs, I can help you delve deeper into it.
+
+
+Here's a more detailed breakdown of adaptive computation for ViTs:
+
+1. **Motivation**: 
+   - Traditional ViTs divide an image into fixed-size patches and process each patch equally. This can be inefficient, especially for large images where not all patches are equally informative.
+   - Some regions of an image might be more relevant to the task at hand (e.g., a face in a portrait photo) while other regions might be less informative (e.g., a plain background).
+
+2. **Patch Selection Mechanism**:
+   - **Attention-based Selection**: Use attention mechanisms to weigh the importance of different patches. Patches with higher attention scores are deemed more important.
+   - **Reinforcement Learning**: Train an agent to select patches based on a reward signal. The agent learns to pick patches that maximize the model's performance on a given task.
+   - **Heuristic Methods**: Define rules or criteria to select patches, such as areas with high gradient or variance.
+
+3. **Processing**:
+   - Once the important patches are selected, they can be processed by the ViT while ignoring or giving less computational attention to the other patches.
+   - This can speed up inference time and reduce computational costs.
+
+4. **Challenges**:
+   - **Training Stability**: Dynamically selecting patches can introduce instability during training. Techniques like curriculum learning or gradual patch inclusion might be needed.
+   - **Generalization**: The model needs to generalize well to unseen images where the distribution of important patches might be different.
+   - **Implementation Complexity**: Implementing adaptive computation can be more complex than traditional ViTs, requiring careful design and potentially more hyperparameter tuning.
+
+5. **Benefits**:
+   - **Efficiency**: By focusing on important patches, the model can achieve similar or even better performance with less computation.
+   - **Interpretability**: The selected patches can provide insights into what the model deems important, making the model's decisions more interpretable.
+
+6. **Applications**:
+   - **Large Image Processing**: As mentioned, for very large images, processing every patch might be infeasible. Adaptive computation can help here.
+   - **Fine-grained Tasks**: For tasks like object detection or segmentation, where specific regions of the image are more relevant, adaptive computation can be beneficial.
+
+In summary, adaptive computation for ViTs is about making the processing of images more efficient and targeted. Instead of treating every part of an image equally, the model learns to focus its computational resources on the most informative parts, leading to potential gains in efficiency and performance. However, this comes at the cost of increased complexity and potential challenges in training and generalization.
 
 #### Drawbacks <a name="drawbacks"></a>
 ... content ...
