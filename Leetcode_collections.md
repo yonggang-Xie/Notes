@@ -172,7 +172,16 @@
 ## First Round
 - course schedule
 - rotate image
+## second round 
+- vertical of binary tree
+## third round
+- longest subsequence of consecutive natural number
 
+## First round (backend)
+- number of ways to decode
+- trim binary search tree
+
+## Second round
 
 
 
