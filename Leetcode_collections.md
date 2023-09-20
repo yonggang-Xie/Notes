@@ -178,8 +178,8 @@
 - longest subsequence of consecutive natural number
 
 ## First round (backend)
-- number of ways to decode
-- trim binary search tree
+- number of ways to decode (91)
+- trim binary search tree (669)
 
 ## Second round
 
