@@ -130,8 +130,12 @@ print(soft_nms(boxes, scores))
 
 
 # softer NMS
+https://ayameyao.github.io/NMS/Chapter3/3argroad3.html
 
 # Adaptive NMS
+However, computational consuming, may raise performance drop.
+Could increase recall in crowded area.
+
 Actually, both the design of greedy-NMS and soft-NMS
 follows the same hypothesis: the detection boxes with
 higher overlaps with M should have a higher likelihood
@@ -140,9 +144,13 @@ when it is used in general object detection, as occlusions
 in a crowd rarely happen.
 
 Idea:  adapt higher threshold (prediction of Density , which is the max IoU of M by others)
+
 ![Density](./images/density.png)
+
 Requires a prediction network on top of detector head (one-stage) or RPN network (two-stage).
+
 ![Adaptive NMS](./images/adaptive_nms.png)
+
 For M at crowded region, use a larger threshold.
 
 ```
