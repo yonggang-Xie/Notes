@@ -25,3 +25,6 @@ To summarize, BM25 is a keyword search algorithm because:
 3. BM25 retrieves and ranks the documents based on their relevance scores, presenting the top-ranked documents as the search results.
 
 The effectiveness of BM25 lies in its ability to consider both the frequency of keywords within documents (TF) and the importance of those keywords across the document collection (IDF). By combining these factors, BM25 can retrieve documents that are most relevant to the user's query based on the presence and significance of the keywords.
+
+## Vectore embedding
+   Use a embedding model to convert query and documents to embeddings and perform cosine similarity search (with threshold)
