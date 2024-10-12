@@ -10,7 +10,6 @@
 - 01 Matrix (542)
 - snakes and ladders (Non-linear not solvable by DP)
 
-
 ## DFS
 ### DFS in graph
 - Number of Islands (200)
@@ -66,12 +65,15 @@
 - Reverse Linked List II (92)
 - reverse group list
 
+# Priority Queues
+- Divide Intervals Into Minimum Number of Groups (2406)
+- The Number of the Smallest Unoccupied Chair(1942)
+- Meeting Rooms II (253)
+
 
 
 
 # Tiktok
-
-
 ## unsolved 
 ### from zhihu https://zhuanlan.zhihu.com/p/392284340
 
