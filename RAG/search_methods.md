@@ -28,3 +28,6 @@ The effectiveness of BM25 lies in its ability to consider both the frequency of 
 
 ## Vectore embedding
    Use a embedding model to convert query and documents to embeddings and perform cosine similarity search (with threshold)
+
+## Hybrid / ensemble retrieval
+   Combine different retrievers and assign weights to combine the results.
