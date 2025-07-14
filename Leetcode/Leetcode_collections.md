@@ -58,6 +58,8 @@
 
 # Sliding Window
 - gas station
+- merge intervals
+- longest substring without repeating characters. (use character set to record unique characters in current window.) set is effcient.
 
 
 # linked list
