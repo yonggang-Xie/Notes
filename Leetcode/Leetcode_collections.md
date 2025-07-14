@@ -58,7 +58,7 @@
 
 # Sliding Window
 - gas station
-- merge intervals
+- merge intervals (compare the start and end, add one by one to res [])
 - longest substring without repeating characters. (use character set to record unique characters in current window.) set is effcient.
 
 
