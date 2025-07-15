@@ -14,6 +14,7 @@
 ### DFS in graph
 - Number of Islands (200)
 - Surrounded Regions (130)
+- * Word Search (Typical DFS) *
 
 * To do *
 - course schedule I and II (207 210)
@@ -61,7 +62,6 @@
 - merge intervals (compare the start and end, add one by one to res [])
 - longest substring without repeating characters. (use character set to record unique characters in current window.) set is effcient.
 
-
 # linked list
 - reverse linked list
 - Reverse Linked List II (92)
@@ -72,7 +72,11 @@
 - The Number of the Smallest Unoccupied Chair(1942)
 - Meeting Rooms II (253)
 
+# Hash tables
+Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as shared key)
 
+# String
+Reverse Integer (string operation, use[::-1] for reverse. compare every digit with the 32digit max)
 
 
 # Tiktok
