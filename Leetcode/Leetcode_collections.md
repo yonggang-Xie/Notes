@@ -53,7 +53,7 @@
 - Leetcode 332 (Reconstruct Itinerary)
 
 # Two Pointers
-- two sum , three sum (remember to avoid duplicated cases)
+- two sum , three sum (remember to avoid duplicated cases) (review to see how to use set properly)
 - contain most water
 - trapping rain water (can also use dp)
 
