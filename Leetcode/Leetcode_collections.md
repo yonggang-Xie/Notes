@@ -66,6 +66,7 @@
 - reverse linked list
 - Reverse Linked List II (92)
 - reverse group list
+- Add Two Numbers (2) (remember how to value list node ans.next = ListNode(sum_digit))
 
 # Priority Queues
 - Divide Intervals Into Minimum Number of Groups (2406)
