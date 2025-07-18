@@ -51,6 +51,7 @@
 - Letter Combinations of a Phone Number (17)
 - Partitioning Panlindrome (131)
 - Leetcode 332 (Reconstruct Itinerary)
+- Generate Parentheses (22)
 
 # Two Pointers
 - two sum , three sum (remember to avoid duplicated cases) (review to see how to use set properly)
@@ -78,6 +79,9 @@ Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as
 
 # String
 Reverse Integer (string operation, use[::-1] for reverse. compare every digit with the 32digit max)
+
+# prefix
+Maximum Subarray (53)
 
 
 # Tiktok
