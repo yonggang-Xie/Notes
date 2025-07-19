@@ -43,7 +43,7 @@
 - Palindromic Substrings(647)
 * - Longest Palindromic Subsequence (516) *
 
-# Backtrack
+# Backtrack !! review more
 
 - Combinations (77)
 - Permutations (46)
@@ -52,11 +52,13 @@
 - Partitioning Panlindrome (131)
 - Leetcode 332 (Reconstruct Itinerary)
 - Generate Parentheses (22)
+  
 
 # Two Pointers
 - two sum , three sum (remember to avoid duplicated cases) (review to see how to use set properly)
 - contain most water
 - trapping rain water (can also use dp)
+- Remove Nth Node From End of List 19 (fast slow pointer. let fast move n step first. similar to use 15min and 1 hour candle to get 45min. use dummy head to avoid specially dealing with deleting first node)
 
 # Sliding Window
 - gas station
