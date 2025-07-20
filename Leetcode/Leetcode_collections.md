@@ -85,6 +85,10 @@ Reverse Integer (string operation, use[::-1] for reverse. compare every digit wi
 # prefix
 Maximum Subarray (53)
 
+# Interval
+Merge Interval
+Insert Interval
+
 
 # Tiktok
 ## unsolved 
