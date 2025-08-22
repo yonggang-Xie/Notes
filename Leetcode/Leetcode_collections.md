@@ -5,6 +5,7 @@
 - Binary Tree Right Side View (199)
 - Average of Levels in Binary Tree (637)
 - Binary Tree Zigzag Level Order Traversal (103)
+- Recover BST () inorder traverse should be ascending, find the 2 that are not and switch
 
 ### BFS in graph
 - 01 Matrix (542)
@@ -15,9 +16,10 @@
 - Number of Islands (200)
 - Surrounded Regions (130)
 - * Word Search (Typical DFS) *
+- course schedule I (207)
 
-* To do *
-- course schedule I and II (207 210)
+*  To do *
+- course schedule II (207 210)
 -  Max Area of Island (695)
 -  Generate Parentheses (22)
 -  Clone Graph  (133)
@@ -81,7 +83,8 @@
 Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as shared key)
 
 # String
-Reverse Integer (string operation, use[::-1] for reverse. compare every digit with the 32digit max)
+- Reverse Integer (string operation, use[::-1] for reverse. compare every digit with the 32digit max)
+- compare version number
 
 # prefix
 Maximum Subarray (53)
