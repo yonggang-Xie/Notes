@@ -1,3 +1,6 @@
+- happy numbers
+
+
 # BFS and DFS
 ## BFS
 ### BFS in tree
@@ -32,6 +35,7 @@
 - Frog Jump (403)
 - Edit Distance ()
 - Interleaving String () *review*
+- longest increasing subsequence *review*
   
 ## graph
 
@@ -74,10 +78,11 @@
 - reverse group list
 - Add Two Numbers (2) (remember how to value list node ans.next = ListNode(sum_digit))
 
-# Priority Queues
+# Priority Queues (Heap)
 - Divide Intervals Into Minimum Number of Groups (2406)
 - The Number of the Smallest Unoccupied Chair(1942)
 - Meeting Rooms II (253)
+- happy numbers 
 
 # Hash tables
 Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as shared key)
