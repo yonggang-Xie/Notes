@@ -88,7 +88,7 @@ Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as
 # String
 - Reverse Integer (string operation, use[::-1] for reverse. compare every digit with the 32digit max)
 - compare version number
-- decode string
+- decode string         # use stack to get everything in [] # plain case : no nested, everything inside * num # nest case: recursively call this funciton
 
 # prefix
 Maximum Subarray (53)
