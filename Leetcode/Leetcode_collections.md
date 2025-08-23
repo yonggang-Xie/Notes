@@ -1,6 +1,4 @@
 
-
-
 # BFS and DFS
 ## BFS
 ### BFS in tree
@@ -90,6 +88,7 @@ Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as
 # String
 - Reverse Integer (string operation, use[::-1] for reverse. compare every digit with the 32digit max)
 - compare version number
+- decode string
 
 # prefix
 Maximum Subarray (53)
