@@ -1,4 +1,4 @@
-- happy numbers
+
 
 
 # BFS and DFS
@@ -82,7 +82,7 @@
 - Divide Intervals Into Minimum Number of Groups (2406)
 - The Number of the Smallest Unoccupied Chair(1942)
 - Meeting Rooms II (253)
-- happy numbers 
+- Longest happy numbers 1405 (use heap to get max_count of abc, priority queue to use max_count character)
 
 # Hash tables
 Group Anagrams (49) (Use defaultdict(list) to avoid key error / use sorted(s) as shared key)
